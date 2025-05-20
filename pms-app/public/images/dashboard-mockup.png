@@ -1,0 +1,109 @@
+<!-- SVG Placeholder for dashboard-mockup.png -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f5f7fa"/>
+  
+  <!-- Dashboard frame -->
+  <rect x="10" y="10" width="1180" height="780" rx="10" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="10" y="10" width="1180" height="60" rx="10" fill="#1976d2"/>
+  <text x="50" y="45" font-family="Arial" font-size="24" fill="white" font-weight="bold">PMS Dashboard</text>
+  
+  <!-- Sidebar -->
+  <rect x="10" y="70" width="220" height="720" fill="#f9fafc"/>
+  
+  <!-- Menu items -->
+  <rect x="25" y="100" width="190" height="50" rx="5" fill="#e8f0fe"/>
+  <text x="60" y="130" font-family="Arial" font-size="16" fill="#1976d2">Dashboard</text>
+  
+  <text x="60" y="190" font-family="Arial" font-size="16" fill="#5f6368">Suppliers</text>
+  <text x="60" y="240" font-family="Arial" font-size="16" fill="#5f6368">Purchase Orders</text>
+  <text x="60" y="290" font-family="Arial" font-size="16" fill="#5f6368">Inventory</text>
+  <text x="60" y="340" font-family="Arial" font-size="16" fill="#5f6368">Invoices</text>
+  <text x="60" y="390" font-family="Arial" font-size="16" fill="#5f6368">Reports</text>
+  <text x="60" y="440" font-family="Arial" font-size="16" fill="#5f6368">Settings</text>
+  
+  <!-- Content area -->
+  <rect x="250" y="90" width="920" height="680" rx="8" fill="white"/>
+  
+  <!-- Stats cards -->
+  <rect x="270" y="110" width="210" height="120" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="290" y="140" font-family="Arial" font-size="16" fill="#5f6368">Active Orders</text>
+  <text x="290" y="180" font-family="Arial" font-size="36" fill="#1976d2" font-weight="bold">42</text>
+  
+  <rect x="500" y="110" width="210" height="120" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="520" y="140" font-family="Arial" font-size="16" fill="#5f6368">Pending Invoices</text>
+  <text x="520" y="180" font-family="Arial" font-size="36" fill="#ff9800" font-weight="bold">13</text>
+  
+  <rect x="730" y="110" width="210" height="120" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="750" y="140" font-family="Arial" font-size="16" fill="#5f6368">Low Stock Items</text>
+  <text x="750" y="180" font-family="Arial" font-size="36" fill="#f44336" font-weight="bold">7</text>
+  
+  <rect x="960" y="110" width="210" height="120" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="980" y="140" font-family="Arial" font-size="16" fill="#5f6368">Total Suppliers</text>
+  <text x="980" y="180" font-family="Arial" font-size="36" fill="#4caf50" font-weight="bold">86</text>
+  
+  <!-- Charts -->
+  <rect x="270" y="250" width="440" height="250" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="290" y="280" font-family="Arial" font-size="18" fill="#202124" font-weight="bold">Procurement Spending</text>
+  
+  <!-- Bar chart -->
+  <rect x="290" y="310" width="40" height="160" fill="#bbdefb"/>
+  <rect x="340" y="350" width="40" height="120" fill="#90caf9"/>
+  <rect x="390" y="330" width="40" height="140" fill="#64b5f6"/>
+  <rect x="440" y="280" width="40" height="190" fill="#42a5f5"/>
+  <rect x="490" y="390" width="40" height="80" fill="#2196f3"/>
+  <rect x="540" y="310" width="40" height="160" fill="#1976d2"/>
+  <rect x="590" y="370" width="40" height="100" fill="#0d47a1"/>
+  
+  <line x1="290" y1="470" x2="630" y2="470" stroke="#e0e6ed" stroke-width="2"/>
+  
+  <!-- Second chart -->
+  <rect x="730" y="250" width="440" height="250" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="750" y="280" font-family="Arial" font-size="18" fill="#202124" font-weight="bold">Supplier Performance</text>
+  
+  <!-- Line chart -->
+  <polyline points="750,400 790,390 830,410 870,360 910,380 950,340 990,370 1030,320 1070,350 1110,330" 
+           fill="none" stroke="#4caf50" stroke-width="3"/>
+  
+  <line x1="750" y1="470" x2="1110" y2="470" stroke="#e0e6ed" stroke-width="2"/>
+  
+  <!-- Table -->
+  <rect x="270" y="520" width="900" height="230" rx="8" fill="white" stroke="#e0e6ed" stroke-width="2"/>
+  <text x="290" y="550" font-family="Arial" font-size="18" fill="#202124" font-weight="bold">Recent Purchase Orders</text>
+  
+  <!-- Table header -->
+  <rect x="290" y="570" width="860" height="40" fill="#f5f7fa"/>
+  <text x="310" y="595" font-family="Arial" font-size="14" fill="#5f6368" font-weight="bold">Order ID</text>
+  <text x="410" y="595" font-family="Arial" font-size="14" fill="#5f6368" font-weight="bold">Supplier</text>
+  <text x="610" y="595" font-family="Arial" font-size="14" fill="#5f6368" font-weight="bold">Date</text>
+  <text x="730" y="595" font-family="Arial" font-size="14" fill="#5f6368" font-weight="bold">Amount</text>
+  <text x="850" y="595" font-family="Arial" font-size="14" fill="#5f6368" font-weight="bold">Status</text>
+  
+  <!-- Table rows -->
+  <line x1="290" y1="610" x2="1150" y2="610" stroke="#e0e6ed" stroke-width="1"/>
+  <text x="310" y="635" font-family="Arial" font-size="14" fill="#202124">PO-2023-0042</text>
+  <text x="410" y="635" font-family="Arial" font-size="14" fill="#202124">Acme Supplies Inc.</text>
+  <text x="610" y="635" font-family="Arial" font-size="14" fill="#202124">May 4, 2023</text>
+  <text x="730" y="635" font-family="Arial" font-size="14" fill="#202124">$12,400.00</text>
+  <rect x="850" y="620" width="80" height="25" rx="12" fill="#e8f5e9"/>
+  <text x="865" y="635" font-family="Arial" font-size="12" fill="#4caf50">Completed</text>
+  
+  <line x1="290" y1="650" x2="1150" y2="650" stroke="#e0e6ed" stroke-width="1"/>
+  <text x="310" y="675" font-family="Arial" font-size="14" fill="#202124">PO-2023-0041</text>
+  <text x="410" y="675" font-family="Arial" font-size="14" fill="#202124">TechPartner Solutions</text>
+  <text x="610" y="675" font-family="Arial" font-size="14" fill="#202124">May 3, 2023</text>
+  <text x="730" y="675" font-family="Arial" font-size="14" fill="#202124">$8,750.50</text>
+  <rect x="850" y="660" width="80" height="25" rx="12" fill="#fff8e1"/>
+  <text x="865" y="675" font-family="Arial" font-size="12" fill="#ff9800">Pending</text>
+  
+  <line x1="290" y1="690" x2="1150" y2="690" stroke="#e0e6ed" stroke-width="1"/>
+  <text x="310" y="715" font-family="Arial" font-size="14" fill="#202124">PO-2023-0040</text>
+  <text x="410" y="715" font-family="Arial" font-size="14" fill="#202124">Global Manufacturing</text>
+  <text x="610" y="715" font-family="Arial" font-size="14" fill="#202124">May 2, 2023</text>
+  <text x="730" y="715" font-family="Arial" font-size="14" fill="#202124">$24,320.75</text>
+  <rect x="850" y="700" width="80" height="25" rx="12" fill="#e3f2fd"/>
+  <text x="865" y="715" font-family="Arial" font-size="12" fill="#1976d2">Shipped</text>
+</svg>

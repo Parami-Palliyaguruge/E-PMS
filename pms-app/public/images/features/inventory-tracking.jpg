@@ -1,0 +1,20 @@
+<!-- Inventory Tracking -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#f3e5f5"/>
+  <text x="400" y="200" font-family="Arial" font-size="32" text-anchor="middle" fill="#9c27b0">Inventory Tracking</text>
+  <rect x="200" y="250" width="400" height="50" rx="10" fill="#9c27b0" opacity="0.3"/>
+  
+  <!-- Inventory boxes illustration -->
+  <rect x="330" y="120" width="60" height="60" fill="#ba68c8"/>
+  <rect x="400" y="120" width="60" height="60" fill="#ab47bc"/>
+  <rect x="470" y="120" width="60" height="60" fill="#9c27b0"/>
+  
+  <rect x="300" y="150" width="60" height="60" fill="#ce93d8"/>
+  <rect x="370" y="150" width="60" height="60" fill="#ba68c8"/>
+  <rect x="440" y="150" width="60" height="60" fill="#ab47bc"/>
+  
+  <rect x="270" y="180" width="60" height="60" fill="#e1bee7"/>
+  <rect x="340" y="180" width="60" height="60" fill="#ce93d8"/>
+  <rect x="410" y="180" width="60" height="60" fill="#ba68c8"/>
+</svg>

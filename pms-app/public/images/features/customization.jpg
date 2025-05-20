@@ -1,0 +1,26 @@
+<!-- Customization -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#ede7f6"/>
+  <text x="400" y="200" font-family="Arial" font-size="32" text-anchor="middle" fill="#673ab7">Customizable Settings</text>
+  <rect x="200" y="250" width="400" height="50" rx="10" fill="#673ab7" opacity="0.3"/>
+  
+  <!-- Settings gear icon -->
+  <circle cx="400" cy="150" r="70" fill="white" stroke="#b39ddb" stroke-width="2"/>
+  
+  <path d="M400,90 L410,90 L415,110 C419,111 423,113 427,115 L445,105 L452,112 L442,130
+           C444,134 446,138 447,142 L467,147 L467,157 L447,162 C446,166 444,170 442,174
+           L452,192 L445,199 L427,189 C423,191 419,193 415,194 L410,214 L400,214 L395,194
+           C391,193 387,191 383,189 L365,199 L358,192 L368,174 C366,170 364,166 363,162
+           L343,157 L343,147 L363,142 C364,138 366,134 368,130 L358,112 L365,105 L383,115
+           C387,113 391,111 395,110 Z" fill="#673ab7"/>
+  
+  <circle cx="400" cy="150" r="25" fill="white"/>
+  
+  <!-- Slider controls -->
+  <rect x="200" y="300" width="400" height="10" rx="5" fill="#b39ddb"/>
+  <circle cx="300" cy="305" r="15" fill="#673ab7"/>
+  
+  <rect x="200" y="330" width="400" height="10" rx="5" fill="#b39ddb"/>
+  <circle cx="500" cy="335" r="15" fill="#673ab7"/>
+</svg>

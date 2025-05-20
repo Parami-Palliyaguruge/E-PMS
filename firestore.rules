@@ -1,0 +1,104 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    // Helper function to check if user is associated with a business
+    function isUserInBusiness(businessId) {
+      return request.auth != null && 
+        (exists(/databases/$(database)/documents/businesses/$(businessId)/users/$(request.auth.uid)) || 
+         get(/databases/$(database)/documents/businesses/$(businessId)).data.ownerId == request.auth.uid);
+    }
+    
+    // Additional helper to check if user is admin or owner
+    function isAdminOrOwner(businessId) {
+      return request.auth != null && 
+        (get(/databases/$(database)/documents/businesses/$(businessId)).data.ownerId == request.auth.uid ||
+        (exists(/databases/$(database)/documents/businesses/$(businessId)/users/$(request.auth.uid)) && 
+         get(/databases/$(database)/documents/businesses/$(businessId)/users/$(request.auth.uid)).data.role == "admin"));
+    }
+    
+    // Business document access
+    match /businesses/{businessId} {
+      // Allow all business users to read business data
+      allow read: if request.auth != null && 
+        (resource == null || isUserInBusiness(businessId));
+      
+      // Allow create with correct ownerId
+      allow create: if request.auth != null && 
+        request.resource.data.ownerId == request.auth.uid;
+      
+      // Allow update/delete for business owners
+      allow update, delete: if request.auth != null && 
+        resource.data.ownerId == request.auth.uid;
+      
+      // Allow access to sub-collections for all business users
+      match /{subcollection}/{document} {
+        // Allow READ for any user in the business
+        allow read: if request.auth != null && isUserInBusiness(businessId);
+        
+        // Allow WRITE for owners/admins to all subcollections
+        allow write: if request.auth != null && isAdminOrOwner(businessId);
+        
+        // Allow WRITE for officers to specific collections
+        allow create, update: if request.auth != null && 
+          isUserInBusiness(businessId) &&
+          (
+            subcollection == "inventoryItems" || 
+            subcollection == "purchaseOrders" || 
+            subcollection == "invoices"
+          );
+        
+        // Allow access to all nested documents for business users
+        match /{nestedDoc} {
+          allow read: if request.auth != null && isUserInBusiness(businessId);
+        }
+      }
+    }
+    
+    // User collection rules
+    match /users/{userId} {
+      // Anyone can read their own profile
+      allow read: if request.auth != null && request.auth.uid == userId;
+      
+      // Only the user can update their own profile
+      allow write: if request.auth != null && request.auth.uid == userId;
+      
+      // Allow access to businesses subcollection
+      match /businesses/{businessId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+    
+    // System collections (accessible to authenticated users)
+    match /system/{document=**} {
+      allow read: if request.auth != null;
+    }
+
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return request.auth != null && 
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Admin-only collections
+    match /admin/{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    // Other collections with admin override
+    match /{collection}/{document=**} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (
+        // Regular write rules here
+        true
+        ||
+        // Admin override
+        isAdmin()
+      );
+    }
+  }
+} 

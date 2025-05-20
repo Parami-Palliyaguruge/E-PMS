@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "PMS-V1"
+location: "asia-east1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "postgres"
+      cloudSql:
+        instanceId: "e-pms-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

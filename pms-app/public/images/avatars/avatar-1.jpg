@@ -1,0 +1,24 @@
+<!-- Avatar 1 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#f3e5f5"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="85" r="45" fill="#e1bee7"/>
+  
+  <!-- Eyes -->
+  <circle cx="80" cy="75" r="5" fill="#4a148c"/>
+  <circle cx="120" cy="75" r="5" fill="#4a148c"/>
+  
+  <!-- Smile -->
+  <path d="M75,100 Q100,125 125,100" fill="none" stroke="#4a148c" stroke-width="3"/>
+  
+  <!-- Hair -->
+  <path d="M60,60 Q100,20 140,60" fill="#4a148c"/>
+  
+  <!-- Shoulders -->
+  <path d="M40,200 L40,140 Q100,120 160,140 L160,200" fill="#ce93d8"/>
+  
+  <!-- Name tag -->
+  <rect x="60" y="150" width="80" height="20" rx="5" fill="white"/>
+  <text x="100" y="165" font-family="Arial" font-size="12" text-anchor="middle" fill="#4a148c">Sarah Johnson</text>
+</svg>

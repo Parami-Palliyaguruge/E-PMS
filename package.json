@@ -1,0 +1,24 @@
+{
+  "name": "pms-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd pms-app && npm run start",
+    "build": "cd pms-app && npm run build",
+    "deploy": "node deploy.js",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "emulators": "firebase emulators:start",
+    "setup:functions": "cd functions && npm install"
+  },
+  "dependencies": {
+    "firebase-tools": "^12.9.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "workspaces": [
+    "pms-app",
+    "functions"
+  ]
+}

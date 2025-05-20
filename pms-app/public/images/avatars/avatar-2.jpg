@@ -1,0 +1,24 @@
+<!-- Avatar 2 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#e3f2fd"/>
+  
+  <!-- Face -->
+  <circle cx="100" cy="85" r="45" fill="#bbdefb"/>
+  
+  <!-- Eyes -->
+  <circle cx="80" cy="75" r="5" fill="#0d47a1"/>
+  <circle cx="120" cy="75" r="5" fill="#0d47a1"/>
+  
+  <!-- Smile -->
+  <path d="M75,100 Q100,115 125,100" fill="none" stroke="#0d47a1" stroke-width="3"/>
+  
+  <!-- Hair -->
+  <path d="M60,65 C60,40 140,40 140,65 L140,65 Q140,40 100,50 Q60,40 60,65" fill="#0d47a1"/>
+  
+  <!-- Shoulders -->
+  <path d="M40,200 L40,140 Q100,120 160,140 L160,200" fill="#64b5f6"/>
+  
+  <!-- Name tag -->
+  <rect x="60" y="150" width="80" height="20" rx="5" fill="white"/>
+  <text x="100" y="165" font-family="Arial" font-size="12" text-anchor="middle" fill="#0d47a1">Michael Chen</text>
+</svg>
